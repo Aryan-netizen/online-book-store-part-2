@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!-- navbar starts here -->
+    <nav class="flex flex-row bg-blue-300 justify-between py-2 px-4 lg:px-8">
+        <div class="flex flex-row items-center gap-7">
+            <div id="brand" class="flex flex-row items-center gap-2 hover:cursor-pointer">
+                <i class="fa-solid fa-store text-xl"></i>
+                <h1 class="text-xl">KITABAY</h1>
+            </div>
+            <div>
+                <ul class="lg:flex lg:flexrow lg:items-center lg:gap-4 hidden">
+                    <li class="hover:text-gray-400 hover:cursor-pointer">Home</li>
+                    <li class="hover:text-gray-400 hover:cursor-pointer">Best Seller</li>
+                    <li class="hover:text-gray-400 hover:cursor-pointer">Gift Ideas</li>
+                    <li class="hover:text-gray-400 hover:cursor-pointer">Games</li>
+                    <li class="hover:text-gray-400 hover:cursor-pointer">Electronics</li>
+                    <li class="hover:text-gray-400 hover:cursor-pointer">Home & Garden</li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex flex-row items-center gap-4">
+            <div class="flex flex-row items-center gap-2 hover:bg-slate-400 cursor-pointer p-2 rounded-xl">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>My Cart</span>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="flex flex-row items-center gap-2 hover:bg-slate-400 cursor-pointer p-2 rounded-xl">
+                <i class="fa-solid fa-user"></i>
+                <span>Account</span>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="flex flex-row items-center gap-2 hover:bg-slate-400 cursor-pointer p-2 rounded-xl lg:hidden"
+                onclick="toggle()">
+                <i class="fa-solid fa-bars text-lg"></i>
+            </div>
+        </div>
+        <div id="nav-dialog" class="inset-0 bg-slate-500 hidden absolute z-10">
+            <div class="py-2 px-4 flex flex-row justify-between items-center">
+                <div id="brand" class="flex flex-row items-center gap-2 hover:cursor-pointer">
+                    <i class="fa-solid fa-store text-xl"></i>
+                    <h1 class="text-xl">KITABAY</h1>
+                </div>
+                <div class="flex flex-row items-center gap-2 hover:bg-slate-400 cursor-pointer p-2 rounded-xl lg:hidden"
+                    onclick="toggle()">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </div>
+            </div>
+            <div class="py-2 px-8 flex flex-col items-start w-full bg-slate-100 rounded-xl mx-5">
+                <ul class="">
+                    <li class="hover:text-gray-400 hover:cursor-pointer">Home</li>
+                    <li class="hover:text-gray-400 hover:cursor-pointer">Best Seller</li>
+                    <li class="hover:text-gray-400 hover:cursor-pointer">Gift Ideas</li>
+                    <li class="hover:text-gray-400 hover:cursor-pointer">Games</li>
+                    <li class="hover:text-gray-400 hover:cursor-pointer">Electronics</li>
+                    <li class="hover:text-gray-400 hover:cursor-pointer">Home & Garden</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar ends here -->
+
+    <!-- hero section starts here -->
+    <div class="h-fit lg:grid lg:grid-cols-2 mx-10 my-8">
+        <div class="w-full h-[60%] lg:h-[60%] p-4">
+            <div>
+                <div class="mr-5">
+                    <span class="text-5xl font-bold my-8">
+                        Don’t miss out on exclusive deals made for you.
+                    </span>
+                    <div class="flex items-center gap-2 text-lg my-4 text-gray-600">
+                        <i class="fa-solid fa-truck"></i>
+                        <p>Free US delivery for orders over $200</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-12">
+                    <div class="h-10 bg-blue-500 w-full md:col-span-4 md:grid hidden">
+                        <button class="md:text-base">
+                            All Categories <i class="fa-solid fa-caret-down"></i>
+                        </button>
+                    </div>
+                    <div class="h-10 border border-black w-full grid col-span-11 md:col-span-7">
+                        <input type="text" class="px-2" placeholder="Search entire store here">
+                    </div>
+                    <div class="h-10 bg-blue-500 w-full grid col-span-1">
+                        <div class="flex items-center justify-center">
+                            <i class="fa-solid fa-magnifying-glass text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <hr>
+                </div>
+                <div class="grid grid-cols-2 gap-2 mt-6">
+                    <div class="bg-white h-fit flex flex-col gap-2 p-4 text-sm">
+                        <i class="fa-solid fa-money-bills text-blue-500 text-lg"></i>
+                        <span class="font-bold text-xl">Moneyback</span>
+                        <p>Did you change your mind? You can return the product within 14 days.</p>
+                    </div>
+                    <div class="bg-white h-fit flex flex-col gap-2 p-4 text-sm">
+                        <i class="fa-solid fa-money-bills text-blue-500 text-lg"></i>
+                        <span class="font-bold text-xl">Moneyback</span>
+                        <p>Did you change your mind? You can return the product within 14 days.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div
+            class="w-full h-[40%] lg:h-[60%] flex justify-center items-center translate-y-10 sm:translate-y-10 lg:translate-y-20">
+            <div class="carousel overflow-hidden relative w-full max-w-sm sm:max-w-lg lg:max-w-2xl mx-auto">
+                <div id="carouselContent" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Slide 1 -->
+                    <div class="w-full flex-shrink-0">
+                        <img src="https://picsum.photos/id/237/600/300" alt="Slide 1" class="w-full">
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="w-full flex-shrink-0">
+                        <img src="https://picsum.photos/id/238/600/300" alt="Slide 2" class="w-full">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="w-full flex-shrink-0">
+                        <img src="https://picsum.photos/id/239/600/300" alt="Slide 3" class="w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hero section ends here  -->
+
+    <!-- Categories section starts here  -->
+    <div class="my-20 mx-10 lg:my-0">
+        <div class="flex flex-col justify-center items-center bg-slate-300">
+            <span class="text-2xl font-bold my-6 lg:text-5xl">Top Categories</span>
+            <div class="grid grid-cols-2  my-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                <div class="h-fit w-fit flex justify-center items-center flex-col p-8 gap-2 group">
+                    <div
+                        class="bg-blue-100 border border-blue-500 rounded-full flex justify-center items-center p-8 group-hover:bg-blue-200 group-hover:cursor-pointer">
+                        <i class="fa-solid fa-computer text-4xl"></i>
+                    </div>
+                    <span class="text-center text-xl group-hover:underline group-hover:cursor-pointer">History</span>
+                </div>
+                <div class="h-fit w-fit flex justify-center items-center flex-col p-8 gap-2 group">
+                    <div
+                        class="bg-blue-100 border border-blue-500 rounded-full flex justify-center items-center p-8 group-hover:bg-blue-200 group-hover:cursor-pointer">
+                        <i class="fa-solid fa-computer text-4xl"></i>
+                    </div>
+                    <span class="text-center text-xl group-hover:underline group-hover:cursor-pointer">History</span>
+                </div>
+                <div class="h-fit w-fit flex justify-center items-center flex-col p-8 gap-2 group">
+                    <div
+                        class="bg-blue-100 border border-blue-500 rounded-full flex justify-center items-center p-8 group-hover:bg-blue-200 group-hover:cursor-pointer">
+                        <i class="fa-solid fa-computer text-4xl"></i>
+                    </div>
+                    <span class="text-center text-xl group-hover:underline group-hover:cursor-pointer">History</span>
+                </div>
+                <div class="h-fit w-fit flex justify-center items-center flex-col p-8 gap-2 group">
+                    <div
+                        class="bg-blue-100 border border-blue-500 rounded-full flex justify-center items-center p-8 group-hover:bg-blue-200 group-hover:cursor-pointer">
+                        <i class="fa-solid fa-computer text-4xl"></i>
+                    </div>
+                    <span class="text-center text-xl group-hover:underline group-hover:cursor-pointer">History</span>
+                </div>
+                <div class="h-fit w-fit flex justify-center items-center flex-col p-8 gap-2 group">
+                    <div
+                        class="bg-blue-100 border border-blue-500 rounded-full flex justify-center items-center p-8 group-hover:bg-blue-200 group-hover:cursor-pointer">
+                        <i class="fa-solid fa-computer text-4xl"></i>
+                    </div>
+                    <span class="text-center text-xl group-hover:underline group-hover:cursor-pointer">History</span>
+                </div>
+                <div class="h-fit w-fit flex justify-center items-center flex-col p-8 gap-2 group">
+                    <div
+                        class="bg-blue-100 border border-blue-500 rounded-full flex justify-center items-center p-8 group-hover:bg-blue-200 group-hover:cursor-pointer">
+                        <i class="fa-solid fa-computer text-4xl"></i>
+                    </div>
+                    <span class="text-center text-xl group-hover:underline group-hover:cursor-pointer">History</span>
+                </div>
+                <div class="h-fit w-fit flex justify-center items-center flex-col p-8 gap-2 group">
+                    <div
+                        class="bg-blue-100 border border-blue-500 rounded-full flex justify-center items-center p-8 group-hover:bg-blue-200 group-hover:cursor-pointer">
+                        <i class="fa-solid fa-computer text-4xl"></i>
+                    </div>
+                    <span class="text-center text-xl group-hover:underline group-hover:cursor-pointer">History</span>
+                </div>
+                <div class="h-fit w-fit flex justify-center items-center flex-col p-8 gap-2 group">
+                    <div
+                        class="bg-blue-100 border border-blue-500 rounded-full flex justify-center items-center p-8 group-hover:bg-blue-200 group-hover:cursor-pointer">
+                        <i class="fa-solid fa-computer text-4xl"></i>
+                    </div>
+                    <span class="text-center text-xl group-hover:underline group-hover:cursor-pointer">History</span>
+                </div>
+            </div>
+            <div
+                class="flex items-center justify-center gap-4 px-16 mb-10 bg-white border border-gray-400 mx-10 py-2 hover:text-blue-500 hover:cursor-pointer hover:bg-slate-100 rounded-lg">
+                <p class="text-lg">View more categories</p><i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Catogories section ends here -->
+
+    <!-- product cards start here  -->
+    <div class="bg-gray-100 p-6">
+        <div class="container mx-auto">
+            <!-- Breadcrumb -->
+            <div class="text-sm mb-4">
+                <a href="#" class="text-blue-500">Home</a> / <a href="#" class="text-blue-500">Products</a> / <span class="text-gray-500">Electronics</span>
+            </div>
+    
+            <!-- Heading -->
+            <h1 class="text-2xl font-bold mb-6">Electronics</h1>
+    
+            <!-- Filters and Sort -->
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <button id="filter-price" class="bg-blue-500 text-white px-4 py-2 rounded">Filter by Price < $1000</button>
+                </div>
+                <div>
+                    <button id="sort-price" class="bg-blue-500 text-white px-4 py-2 rounded">Sort by Price</button>
+                    <button id="sort-rating" class="bg-blue-500 text-white px-4 py-2 rounded">Sort by Rating</button>
+                </div>
+            </div>
+    
+            <!-- Product Grid -->
+            <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Product Cards will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- product ends here    -->
+
+    <!-- footer starts here -->
+    <div class="bg-gray-100">
+        <footer class="bg-white py-10 px-12">
+            <!-- Payment Partners -->
+            <div class="container mx-auto px-4">
+                <div class="flex justify-center space-x-8 mb-8">
+                    <img src="https://via.placeholder.com/60x30" alt="PayPal Logo" class="h-8">
+                    <img src="https://via.placeholder.com/60x30" alt="Stripe Logo" class="h-8">
+                    <img src="https://via.placeholder.com/60x30" alt="Visa Logo" class="h-8">
+                    <img src="https://via.placeholder.com/60x30" alt="Shopify Logo" class="h-8">
+                    <img src="https://via.placeholder.com/60x30" alt="Bank of America Logo" class="h-8">
+                </div>
+            </div>
+    
+            <!-- Footer Links -->
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                    <!-- Company Section -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Company</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-600 hover:underline">About Flowbite Marketplace</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Careers</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Flowbite Inc</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Marketplace & Shipping</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Our Brands</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Corporate Sales</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Tax Fees</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Our Warehouse</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Payment Methods Section -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Payment Methods</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-600 hover:underline">Visa & Mastercard</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Amex Card</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Platinum Visa & Mastercard</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Gift Cards</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Money Store</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Shop with Points</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Crypto</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">My Flowbite Credit Card</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Help Center Section -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Help Center</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-600 hover:underline">COVID-19 and Shipping</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Delivery Rates</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Discounts</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Returns & Replacements</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Recycling</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Manage your Content</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Mobile APP</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Customer Support</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Orders & Shipment Section -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Orders & Shipment</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-600 hover:underline">My Account</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Order Shipment</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Flowbite Marketplace</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Financing Methods</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- footer ends here   -->
+
+
+</body>
+<script src="app.js"></script>
+
+</html>

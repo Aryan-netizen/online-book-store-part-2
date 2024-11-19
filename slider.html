@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <div class="carousel overflow-hidden relative w-full max-w-xl mx-auto">
+        <div id="carouselContent" class="flex transition-transform duration-500 ease-in-out">
+            <!-- Slide 1 -->
+            <div class="w-full flex-shrink-0">
+                <img src="https://picsum.photos/id/237/600/300" alt="Slide 1" class="w-full">
+            </div>
+            <!-- Slide 2 -->
+            <div class="w-full flex-shrink-0">
+                <img src="https://picsum.photos/id/238/600/300" alt="Slide 2" class="w-full">
+            </div>
+            <!-- Slide 3 -->
+            <div class="w-full flex-shrink-0">
+                <img src="https://picsum.photos/id/239/600/300" alt="Slide 3" class="w-full">
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    const carouselContent = document.getElementById("carouselContent");
+    const slides = document.querySelectorAll(".carousel div");
+    let currentIndex = 0;
+  
+    function showNextSlide() {
+      currentIndex++;
+      if (currentIndex > slides.length) {
+        currentIndex = 0; // Reset to the first slide
+      }
+      const offset = -currentIndex * 100; // Slide width is 100% of the container
+      carouselContent.style.transform = `translateX(${offset}%)`;
+    }
+  
+    // Auto-scroll every 3 seconds
+    setInterval(showNextSlide, 3000);
+  </script>
+  
+</html>
